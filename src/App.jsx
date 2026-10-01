@@ -7,10 +7,10 @@ function App() {
     <>
       <Player></Player>
       <TimerContainer>
-        <Timer title="Nivel Fácil" time="1" ></Timer>
-        <Timer title="Nivel Intermedio" time="20" ></Timer>
-        <Timer title="Nivel Difícil" time="40" ></Timer>
-        <Timer title="Nivel Reto" time="60" ></Timer>
+        <Timer title="Nivel Fácil" time="3"></Timer>
+        <Timer title="Nivel Intermedio" time="5"></Timer>
+        <Timer title="Nivel Difícil" time="40"></Timer>
+        <Timer title="Nivel Reto" time="60"></Timer>
       </TimerContainer>
     </>
   );
