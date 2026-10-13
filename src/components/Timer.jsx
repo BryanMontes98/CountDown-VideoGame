@@ -14,8 +14,11 @@ const Timer = ({ title, time }) => {
 
   if (timerRemaining <= 0) {
     clearInterval(timer.current);
-    setTimeRemaining(initialTime);
     dialogModal.current.open();
+  }
+  
+  const onResetTimeRemaining = () => {
+    setTimeRemaining(initialTime);
   }
 
   const handleStartTime = () => {
@@ -31,7 +34,7 @@ const Timer = ({ title, time }) => {
 
   return (
     <>
-      {<ModalDialog ref={dialogModal} resultGame="perdido" timeTarget={time} />}
+      {<ModalDialog ref={dialogModal} timeRemaining={timerRemaining} onResetTimeRemaining={onResetTimeRemaining} timeTarget={time} />}
       <section className="w-88 flex flex-col items-center justify-center p-8 m-8 bg-[#691a1a] text-[#221c18] shadow-lg rounded-md">
         <h2 className="text-lg tracking-wide text-center uppercase text-[#edfcfa] font-bold mb-2">
           {title}
